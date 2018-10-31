@@ -4,7 +4,7 @@
 <div>
 <!-- Cabeça da pagina -->
   <header id="header" >
-    <h4 id="titulo">Projeto Matrix</h4>
+    <h4 id="titulo1">Projeto Matrix</h4>
   </header>
   
    <!-- Corpo da pagina -->

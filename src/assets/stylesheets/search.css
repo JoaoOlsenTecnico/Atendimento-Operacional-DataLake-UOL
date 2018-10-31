@@ -1,0 +1,48 @@
+#eixo {
+    width: 5%;
+    padding: 16px 20px;
+    margin: 25px;
+    margin-top: 15%;
+    margin-left: 20%;
+    position: relative;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+    outline:none
+}
+#eixo2 {
+    margin-right: 10%;
+    margin-top: 15%;
+    width: 200px;
+
+}
+
+#eixo3 {
+    margin-right: 26.5%;
+    margin-top: 10%;
+    width: 200px;
+}
+
+#selecionar {
+    margin-left: 20%;
+    width: 60%;
+}
+
+#titulo2 {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#bloco5 {
+    width: 40%;
+    height: 50%;
+    background-color: #f8f8f8;
+    border-radius: 3%;
+    box-shadow: 11px 10px 41px -9px rgba(0,0,0,0.52);
+    display: flex;
+    align-content: center; 
+    flex-direction: column;  
+    margin-top: -5%;
+    
+}

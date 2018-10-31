@@ -50,7 +50,10 @@ export default {
     },
 
     methods: {
-
+        
+        home() {
+            router.push({ name: "Home"})
+          },
         
 
         dois() {      
@@ -96,11 +99,13 @@ export default {
                 ['Pepperoni1', 5]
             ]);
 
-
-
+            var tamanhoH = window.innerHeight*0.25;
+            var tamanhoW = window.innerWidth*0.25;
+            
             var options = {
                 title: 'How Much Pizza Sarah Ate Last Night',
-
+                width: tamanhoW,
+                height: tamanhoH,
                 backgroundColor: "#f8f8f8"
             };
 

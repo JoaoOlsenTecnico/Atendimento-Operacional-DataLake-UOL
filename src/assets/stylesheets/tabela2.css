@@ -1,0 +1,63 @@
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 5%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+
+.check {
+    border: 1px solid #5D5C5C;
+    content: "\00a0";
+    font: 16px/1em sans-serif;
+    height: 16px;
+    margin: 0 .25em 0 0;
+    margin-top: 1px;
+    vertical-align: top;
+    width: 16px;
+    border-radius:100px;
+}
+
+#titulo {
+    padding: 10px;
+    font-size: 300%;
+    color: #1e1e1e;
+}
+
+#bloco6 {
+    margin-left: 5%;
+    margin-top: 1%;
+    width: 90vw;
+    height: 80%;
+    background-color: #f8f8f8;
+    border-radius: 3%;
+    box-shadow: 11px 10px 41px -9px rgba(0,0,0,0.52);
+    display: flex;
+    align-content: center; 
+    flex-direction: column;  
+}
+
+#enviar2 {
+    border: none;   
+    width: 35%;
+    height: 33px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 32%;
+    border-radius: 10px;
+    background-color: #1e1e1e;
+    color: #f8f8f8;
+    font-size: 100%;
+}

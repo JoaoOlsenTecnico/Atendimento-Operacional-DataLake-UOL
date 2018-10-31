@@ -19,6 +19,14 @@ export default {
       router.push({ name: "Status" });
     },
 
+    home() {
+      router.push({ name: "Home"})
+    },
+
+    search() {
+      router.push({ name: "Search"})
+    },
+
     legstatus() {
       document.getElementById("balao").style.width = "28%";
       document.getElementById("balao").style.height = "120px";

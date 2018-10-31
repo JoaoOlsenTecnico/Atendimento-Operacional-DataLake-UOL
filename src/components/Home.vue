@@ -15,7 +15,7 @@
   <!-- Corpo da pagina -->
     <section id="corpo">
         <div id="bloco">
-           <img src="../assets/img/pesquisa.png" id="logoPES">
+           <img src="../assets/img/pesquisa.png" id="logoPES" v-on:click="search()"> 
            <div id="botaoHome"> 
                 <h5 id="ser" class="naoSelecionavel"  v-on:click="legsearch()" v-on:dblclick="outsearch()">•••Search</h5> 
                  <div id="balao2"></div>

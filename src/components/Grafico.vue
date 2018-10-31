@@ -2,7 +2,7 @@
 <div>
      <!-- Cabeça da pagina -->
         <header id="header">
-            <a v-on:click="gohome()"><img src="../assets/img/UOL-OK.png" id="logoUOL"> </a>    
+            <a v-on:click="home()"><img src="../assets/img/UOL-OK.png" id="logoUOL"> </a>   
             <img src="../assets/img/Homem2.png" id="logoMAN">      
             <a  v-on:click="sair()"> <h5 id="usuario">Logout</h5> </a>
         </header>
@@ -14,15 +14,16 @@
 
     <section id="corpo">
         <div id="bloco3">
+        <h1 id="titulo"> Grafico Gerado</h1>
             <div id="app" >
             <GChart 
-            :id="variavel"
+            id="dois"
             class="tamanho"        
             type="ColumnChart"                     
             @ready="onChartReady"
             /> 
             </div>      
-        <h1 v-on:click="voltar()" class="verDetalhe"> VOLTAR </h1>
+        <h1 v-on:click="voltando()" class="verDetalhe" id="voltar"> VOLTAR </h1>
         </div>
 
         <div id="nao">
@@ -55,4 +56,4 @@
 </template>
 
 <!-- Área dos scripts -->
-<script src="@\assets\scripts\detalhe.js">
+<script src="@\assets\scripts\grafico.js">

@@ -1,4 +1,4 @@
-import '@/assets/stylesheets/status.css';
+import '@/assets/stylesheets/grafico.css';
 
 import router from '../../router'
 import axios from 'axios'
@@ -9,7 +9,7 @@ let dadinhos = [];
 let grafico;
 
 export default {
-    name: 'Status',
+    name: 'Grafico',
     components: {
         GChart
     },
@@ -23,48 +23,47 @@ export default {
     },
     mounted() {
 
-        axios
-            .get("http://192.168.4.92:8081/ABv/RotaTres")
-            .then(function (response) {
-                console.info(response.data[1].Data.Dados[1]);
+        // axios
+        //     .get("http://192.168.4.92:8081/ABv/RotaTres")
+        //     .then(function (response) {
+        //         console.info(response.data[1].Data.Dados[1]);
 
-                for (var i = 0; i < 10; i++)
-                    dadinhos[i] = response.data[i].Data.Dados;
+        //         for (var i = 0; i < 10; i++)
+        //             dadinhos[i] = response.data[i].Data.Dados;
 
-                for (var i = 0, t = 0; i < dadinhos[2].length; i++ , t++)
-                    tabela1[i] = response.data[i].Data.Dados[t];
-                console.log(tabela1[0]);
-                for (var i = 5, t = 0; i < dadinhos[2].length + 5; i++ , t++)
-                    tabela1[i] = response.data[i].Data.Dados[t];
-                console.log(tabela1[2]);
-                for (var i = 10, t = 0; i < dadinhos[2].length + 10; i++ , t++)
-                    tabela1[i] = response.data[i].Data.Dados[t];
-                console.log(tabela1[3]);
-                for (var i = 15, t = 0; i < dadinhos[2].length + 15; i++ , t++)
-                    tabela1[i] = response.data[i].Data.Dados[t];
-                console.log(tabela1[4]);
-            })
+        //         for (var i = 0, t = 0; i < dadinhos[2].length; i++ , t++)
+        //             tabela1[i] = response.data[i].Data.Dados[t];
+        //         console.log(tabela1[0]);
+        //         for (var i = 5, t = 0; i < dadinhos[2].length + 5; i++ , t++)
+        //             tabela1[i] = response.data[i].Data.Dados[t];
+        //         console.log(tabela1[2]);
+        //         for (var i = 10, t = 0; i < dadinhos[2].length + 10; i++ , t++)
+        //             tabela1[i] = response.data[i].Data.Dados[t];
+        //         console.log(tabela1[3]);
+        //         for (var i = 15, t = 0; i < dadinhos[2].length + 15; i++ , t++)
+        //             tabela1[i] = response.data[i].Data.Dados[t];
+        //         console.log(tabela1[4]);
+        //     })
 
-            .catch(function (error) {
-                alert("NAO FOI");
-                console.log(error);
-            });
+        //     .catch(function (error) {
+        //         alert("NAO FOI");
+        //         console.log(error);
+        //     });
 
     },
 
     methods: {
 
-        voltar() {
-            localStorage.setItem('var', null)
-            router.push({ name: "Status" });
+        voltando() {
+            router.push({ name: "Search" });
         },
 
         onChartReady(chart, google) {
 
             var data = new google.visualization.DataTable();
-            data.addColumn('string', 'Topping');
-            data.addColumn('number', 'Slices');
-            data.addColumn('number', 'Price');
+            data.addColumn('string', 'Names');
+            data.addColumn('number', 'Ping');
+            data.addColumn('number', 'Date');
             data.addRows([
                 ['Mushrooms', tabela1[0], tabela1[1]],
                 ['Onions', tabela1[1], tabela1[2]],
@@ -84,25 +83,18 @@ export default {
                 ['Pepperoni1', 5]
             ]);
 
+            var tamanhoH = window.innerHeight*0.6;
+            var tamanhoW = window.innerWidth*0.75;
             var options = {
                 title: 'How Much Pizza Sarah Ate Last Night',
-
+                width: tamanhoW,
+                height: tamanhoH,
                 backgroundColor: "#f8f8f8"
             };
 
             var chart = new google.visualization.BarChart(document.getElementById('dois'));
-            chart.draw(data, options);
+            chart.draw(datinha, options);
 
-            var chart2 = new google.visualization.PieChart(document.getElementById('tres'));
-            chart2.draw(datinha, options);
-
-            var chart3 = new google.visualization.LineChart(document.getElementById('quatro'));
-            chart3.draw(data, options);
-
-            var chart4 = new google.visualization.PieChart(document.getElementById('quinta'));
-            chart4.draw(datinha, options);
-
-            this.$forceUpdate();
         },
 
         openNav() {
@@ -127,9 +119,10 @@ export default {
 
         gohome() {
             router.push({ name: "Home" });
-        }
-
-        
+        },
+        home() {
+            router.push({ name: "Home" });
+        },
 
 
     }
