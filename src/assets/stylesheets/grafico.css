@@ -3,7 +3,7 @@
     margin-left: 70%;
 }
 
-#dois {
+.tamanho {
     margin-top: -5%;
     margin-left: 3%;
 }
@@ -17,7 +17,7 @@
 
 
 @media only screen and (max-width: 768px) {
-    #dois {
+    .tamanho {
         margin-top: -25%;
         margin-left: 7%;
     }
