@@ -100,7 +100,7 @@ export default {
             ]);
 
             var tamanhoH = window.innerHeight*0.25;
-            var tamanhoW = window.innerWidth*0.25;
+            var tamanhoW = window.innerWidth*0.8;
             
             var options = {
                 title: 'How Much Pizza Sarah Ate Last Night',
@@ -121,7 +121,9 @@ export default {
         },
 
 
-
+        home() {
+            router.push({ name: "Home"})
+          },
 
         openNav() {
             document.getElementById("mySidenav").style.width = "250px";

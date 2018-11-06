@@ -21,6 +21,12 @@
 
         </div>
 
+             <!-- Cabeça da pagina -->
+        <header id="headerS">
+            <a v-on:click="home()"><img src="../assets/img/UOL-OK.png" id="logoUOL"> </a>   
+            <img src="../assets/img/Homem2.png" id="logoMAN">      
+            <a  v-on:click="sair()"> <h5 id="usuario">Logout</h5> </a>
+        </header>
 
 
 

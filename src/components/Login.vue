@@ -3,13 +3,13 @@
 
 <div>
 <!-- Cabeça da pagina -->
-  <header id="header" >
+  <header id="headerL" >
     <h4 id="titulo1">Projeto Matrix</h4>
   </header>
   
    <!-- Corpo da pagina -->
     <section id="corpo">
-        <div id="bloco">
+        <div id="blocoL">
             <img src="../assets/img/White.png">
             <input type="text" placeholder="Login" name="Login" v-model="login.nome">
             <input type="password" id="senha" placeholder="Senha" name="Senha" v-model="login.senha">

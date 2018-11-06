@@ -1,15 +1,32 @@
 #voltar {
     margin-top: 7%;
-    margin-left: 80%;
+    margin-left: 70%;
 }
 
 #dois {
-    margin-top: -8%;
+    margin-top: -5%;
+    margin-left: 3%;
 }
 
 #titulo {
     padding: 10px;
     margin-top: 1%;
-    font-size: 300%;
+    font-size: 3VW;
     color: #1e1e1e;
+}
+
+
+@media only screen and (max-width: 768px) {
+    #dois {
+        margin-top: -25%;
+        margin-left: 7%;
+    }
+
+    
+#titulo {
+    padding: 10px;
+    margin-top: 1%;
+    font-size: 8VW;
+    color: #1e1e1e;
+}
 }

@@ -83,7 +83,7 @@ export default {
                 ['Pepperoni1', 5]
             ]);
 
-            var tamanhoH = window.innerHeight*0.6;
+            var tamanhoH = window.innerHeight*0.4;
             var tamanhoW = window.innerWidth*0.75;
             var options = {
                 title: 'How Much Pizza Sarah Ate Last Night',

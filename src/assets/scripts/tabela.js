@@ -11,6 +11,14 @@ export default {
     },
   
     methods: {
+      tableBuilder() {
+        var tabela = document.createElement("table")
+        tabela.appendChild(document.createElement("th"));
+        tabela.innerHTML = "pastel"
+
+        console.log()
+
+      },
       next() {
         router.push({ name: "TabelaY" });
       },

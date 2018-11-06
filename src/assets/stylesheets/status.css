@@ -21,6 +21,10 @@
     
 }
 
+#headerS {
+    display: none;
+}
+
 /* Side Bar */
 
 
@@ -117,6 +121,8 @@
     margin-top: -100px;
     
 }
+
+
 #dois, #tres, #quatro, #quinta{
     padding-top: 100px;
 
@@ -212,5 +218,249 @@ h2 {
     margin-bottom: -80px;
 }
 
+/* Mobile */
+
+@media only screen and (max-width: 768px) {
+#logoMAN2 {
+    width: 80%;
+    padding-top: 10px;
+    padding-left: 9px;
+    padding-right: 15px;
+    padding-bottom: 6px;   
+    transition: 0.5s;
+    cursor: pointer;
+    
+}
+
+/* Side Bar */
+
+
+#barraLateral {
+    width: 5%;
+    height: 120%;
+    background-color: #1e1e1e;
+    position: fixed;
+    margin-left: 95%;
+    margin-top: -12px;
+    z-index: 2;
+    display: none;
+
+}
+
+#warning {
+    width: 60%;
+    padding: 15px;
+    margin-top: -2.4px;
+    transition: 0.5s;
+
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 8%;
+    right: 5%;
+    background-color: rgb(255, 255, 255, 0.50);
+    overflow-x: hidden;
+    transition: 0.5s;
+    border-top-left-radius: 10px;
+    border: none;
+    border-color: white;
+    
+ 
+}
+
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    transition: 0.5s;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+/* Corpo */
+#corpo2 {
+    background-color:#d5d5d5;
+    width: 100%;
+    height: 400vw;
+    display: flex;
+    justify-content: space-evenly; 
+    align-items: center;
+    flex-direction: column;
+    z-index: -1000;
+    
+}
+
+
+
+#bloco2 {
+    width: 80%;
+    height: 30%;
+    background-color: #f8f8f8;
+    border-radius: 3%;
+    box-shadow: 11px 10px 41px -9px rgba(0,0,0,0.52);
+    display: flex;
+    align-content: center; 
+    flex-direction: column;
+    margin-left: 22%;
+    margin-top: -100px;
+    
+}
+#dois, #tres, #quatro, #quinta{
+    padding-top: 100px;
+
+}
+
+#nao {
+    display: none;
+}
+
+#bloco3 {
+    width: 90%;
+    height: 70%;
+    background-color: #f8f8f8;
+    border-radius: 3%;
+    box-shadow: 11px 10px 41px -9px rgba(0,0,0,0.52);
+    display: flex;
+    align-content: center; 
+    flex-direction: column;  
+    margin-top: -30%;
+    
+}
+
+.tamanho{
+    margin-top: -10%;
+    height:250px;
+}
+
+.ver {
+    text-align: end;
+    margin-top: 25%;
+    margin-right: 10%;
+    font-size: 5vw;
+    color: black;
+    transition: 0.2s;
+    
+}
+
+.ver:hover {
+    color: gray;
+    cursor: pointer;
+}   
+
+.verDetalhe {
+    text-align: end;
+    margin-top: 10%;
+    margin-right: 10%;
+    font-size: 20px;
+    color: black;
+    transition: 0.2s;
+    
+}
+
+.verDetalhe:hover {
+    color: gray;
+    cursor: pointer;
+}   
+
+select {
+    width: 40%;
+    padding: 16px 20px;
+    margin: 25px;
+    margin-bottom: -100px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+    outline:none;
+    position: relative;
+    float: left;
+}
+
+#horario {
+    width: 20%;
+    padding: 16px 20px;
+    margin: 25px;
+    left: 41%;
+    position: relative;
+    float: left;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+    outline:none
+}
+
+p {
+    font-size: 4vw;
+    text-align: left;
+    padding: 10px;
+    margin-bottom: -80px;
+}
+h2 {
+    padding-top: 30px;
+    text-align: center;
+    margin-bottom: -80px;
+}
+
+    /* Cabeçalho */
+    #headerS {
+        background-color: #1e1e1e;
+        width: 100%;  
+        height: 40px;
+        display: block;
+    }
+    
+    #logoUOL {
+        width: 150px;
+        margin-top: -1%;
+        padding-left: 1%;
+        cursor: pointer;
+    }
+    
+    #logoMAN {
+        width: 30px;
+        margin-top: -5px;
+        margin-left: 50%;
+        display: none;
+    }
+    
+    #usuario {
+        color: white;
+        margin-left: 70%;
+        margin-top: -42px; 
+        font-size: 20px;
+        cursor: pointer;
+        transition: 0.5s;
+            
+    }
+    
+    #usuario:hover {
+        color: gray;
+        
+    }
+
+}
 
 

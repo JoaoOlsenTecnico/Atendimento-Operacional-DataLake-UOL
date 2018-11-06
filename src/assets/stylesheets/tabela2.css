@@ -34,6 +34,7 @@ th {
     padding: 10px;
     font-size: 300%;
     color: #1e1e1e;
+    text-align: center;
 }
 
 #bloco6 {
@@ -60,4 +61,14 @@ th {
     background-color: #1e1e1e;
     color: #f8f8f8;
     font-size: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    #titulo {
+        padding: 10px;
+        font-size: 20%;
+        color: #1e1e1e;
+        text-align: center;
+    }
+    
 }
