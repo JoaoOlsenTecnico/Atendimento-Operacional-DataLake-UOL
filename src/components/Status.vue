@@ -1,7 +1,12 @@
 <template>
 
+
     <section id="tudo">
 
+        <div class="vld-parent">
+            <loading :active.sync="isLoading" 
+            :is-full-page="fullPage"></loading>
+        </div>
 
         <!-- Barra lateral -->
         <div id="barraLateral">
@@ -54,7 +59,8 @@
                 <div id="app" >
                 <h2> Grafico 1 </h2>                    
                 <GChart  
-                id="dois"        
+                id="dois"
+                class="teste"        
                 type="ColumnChart"                     
                 @ready="onChartReady"
                 /> 
@@ -108,3 +114,4 @@
 
 <!-- Areá dos scripts -->
 <script src="..\assets\scripts/status.js">
+

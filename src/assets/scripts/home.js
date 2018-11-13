@@ -49,11 +49,15 @@ export default {
     },
 
     sair() {
-      localStorage.setItem("token", null);
+      localStorage.setItem('Authorization', "");
 
       router.push({ name: "Login" });
 
       //  router.push({ name: "Home" });
+    },
+
+    enter() {
+      document.getElementById('fade').style.opacity = "1";
     }
   }
 };

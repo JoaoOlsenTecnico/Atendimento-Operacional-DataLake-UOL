@@ -12,6 +12,13 @@
     
 }
 
+#fade {
+    transition: 1s;
+}
+#fade {
+    opacity: 1;
+}
+
 body {
     background-color:#d5d5d5;
 }

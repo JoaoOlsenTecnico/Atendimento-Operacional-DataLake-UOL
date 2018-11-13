@@ -1,5 +1,5 @@
 <template>
-<div>
+<div id="fade">
      <!-- Cabeça da pagina -->
         <header id="header">
             <a><img src="../assets/img/UOL-OK.png" id="logoUOL"> </a>   

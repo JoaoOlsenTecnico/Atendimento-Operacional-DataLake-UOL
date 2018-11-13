@@ -8,7 +8,7 @@
   import './assets/stylesheets/style.css';
   export default {
     data() {
-      
+      return {}
     }
   }
 </script>

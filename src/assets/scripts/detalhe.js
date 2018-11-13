@@ -3,6 +3,7 @@ import '@/assets/stylesheets/status.css';
 import router from '../../router'
 import axios from 'axios'
 import { GChart } from "vue-google-charts"
+import { ip }  from './ip'
 
 let tabela1 = [];
 let dadinhos = [];
@@ -24,7 +25,7 @@ export default {
     mounted() {
 
         axios
-            .get("http://192.168.4.92:8081/ABv/RotaTres")
+            .get(ip + "/api/incidente/")
             .then(function (response) {
                 console.info(response.data[1].Data.Dados[1]);
 

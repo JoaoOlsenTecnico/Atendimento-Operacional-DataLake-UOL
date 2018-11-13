@@ -3,46 +3,66 @@ import '@/assets/stylesheets/status.css';
 import router from '../../router'
 import axios from 'axios'
 import { GChart } from "vue-google-charts"
+import { ip }  from './ip'
+import Loading from 'vue-loading-overlay';
+import 'vue-loading-overlay/dist/vue-loading.css';
+    
+
 
 let tabela1 = [];
+let nome1 = [];
 let dadinhos = [];
 
 export default {
     name: 'Status',
     components: {
-        GChart
+        GChart,
+        Loading
     },
     data() {
         return {
+            isLoading: false,
+            fullPage: true
         }
     },
 
     mounted() {
 
+        let token = localStorage.getItem('Authorization');
+        this.isLoading = true;
         axios
-            .get("http://192.168.4.92:8081/ABv/RotaTres")
+            .get(ip + "/api/incidente/", {
+             headers: { Authorization:  token } })
             .then(function (response) {
-                console.info(response.data[1].Data.Dados[1]);
+               
+                console.info(response.data[0].Data.Dados[0]);
+                console.info(response.data[0].Data.Nomes[0]);  
+                
+               let tamanho = response.data[0].Data.Dados.length;
+               console.log(tamanho);
 
-                for (var i = 0; i < 10; i++)
-                    dadinhos[i] = response.data[i].Data.Dados;
+                for (var i = 0; i < tamanho; i++)
+                tabela1[i] = response.data[0].Data.Dados[i];
 
-                for (var i = 0, t = 0; i < dadinhos[2].length; i++ , t++)
-                    tabela1[i] = response.data[i].Data.Dados[t];
-                console.log(tabela1[0]);
-                for (var i = 5, t = 0; i < dadinhos[2].length + 5; i++ , t++)
-                    tabela1[i] = response.data[i].Data.Dados[t];
-                console.log(tabela1[2]);
-                for (var i = 10, t = 0; i < dadinhos[2].length + 10; i++ , t++)
-                    tabela1[i] = response.data[i].Data.Dados[t];
-                console.log(tabela1[3]);
-                for (var i = 15, t = 0; i < dadinhos[2].length + 15; i++ , t++)
-                    tabela1[i] = response.data[i].Data.Dados[t];
-                console.log(tabela1[4]);
+                for (var i = 0; i < tamanho; i++)
+                nome1[i] = response.data[0].Data.Nomes[i];
+        
+                // for (var i = 0, t = 0; i < dadinhos[2].length; i++ , t++)
+                //     tabela1[i] = response.data[i].Data.Dados[t];
+                // console.log(tabela1[0]);
+                // for (var i = 5, t = 0; i < dadinhos[2].length + 5; i++ , t++)
+                //     tabela1[i] = response.data[i].Data.Dados[t];
+                // console.log(tabela1[2]);
+                // for (var i = 10, t = 0; i < dadinhos[2].length + 10; i++ , t++)
+                //     tabela1[i] = response.data[i].Data.Dados[t];
+                // console.log(tabela1[3]);
+                // for (var i = 15, t = 0; i < dadinhos[2].length + 15; i++ , t++)
+                //     tabela1[i] = response.data[i].Data.Dados[t];
+                // console.log(tabela1[4]);
             })
 
             .catch(function (error) {
-                alert("NAO FOI");
+                alert("Erro ao carregar!");
                 console.log(error);
             });
 
@@ -79,13 +99,12 @@ export default {
             var data = new google.visualization.DataTable();
             data.addColumn('string', 'Topping');
             data.addColumn('number', 'Slices');
-            data.addColumn('number', 'Price');
             data.addRows([
-                ['Mushrooms', tabela1[0], tabela1[1]],
-                ['Onions', tabela1[1], tabela1[2]],
-                ['Olives', tabela1[2], tabela1[0]],
-                ['Zucchini', tabela1[3], tabela1[4]],
-                ['Pepperoni', tabela1[4], tabela1[3]]
+                [nome1[0], tabela1[0]],
+                [nome1[1], tabela1[1]],
+                [nome1[2], tabela1[2]],
+                [nome1[3], tabela1[3] ],
+                [nome1[4], tabela1[4]]
             ]);
 
             var datinha = new google.visualization.DataTable();
@@ -99,11 +118,15 @@ export default {
                 ['Pepperoni1', 5]
             ]);
 
-            var tamanhoH = window.innerHeight*0.25;
-            var tamanhoW = window.innerWidth*0.8;
             
+            var tamanhoH = window.innerHeight*0.25;
+            var tamanhoW = window.innerWidth*0.25;
+            if (window.innerWidth < 450) {
+                var tamanhoW = window.innerWidth*0.8;
+            }
+
             var options = {
-                title: 'How Much Pizza Sarah Ate Last Night',
+                title: 'GRAFICO'    ,
                 width: tamanhoW,
                 height: tamanhoH,
                 backgroundColor: "#f8f8f8"
@@ -117,7 +140,8 @@ export default {
             chart3.draw(data, options);
             var chart4 = new google.visualization.PieChart(document.getElementById('quinta'));
             chart4.draw(datinha, options);
-
+            this.isLoading = false;
+          
         },
 
 
