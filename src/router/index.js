@@ -102,7 +102,7 @@ router.beforeEach((to, from, next) => {
     if(localStorage.getItem('Authorization'))
 
     axios
-      .get("http://192.168.4.92:8080/api/v1/autenticado/" , {
+      .get("http://172.16.6.17:8080/api/incidentes" , {
       headers: { Authorization:  token } })
       .then(function (response) {
         next();

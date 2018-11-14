@@ -31,10 +31,10 @@ export default {
         let token = localStorage.getItem('Authorization');
         this.isLoading = true;
         axios
-            .get(ip + "/api/incidente/", {
+            .get(ip + "/api/incidentes/", {
              headers: { Authorization:  token } })
             .then(function (response) {
-               
+                
                 console.info(response.data[0].Data.Dados[0]);
                 console.info(response.data[0].Data.Nomes[0]);  
                 
@@ -47,18 +47,6 @@ export default {
                 for (var i = 0; i < tamanho; i++)
                 nome1[i] = response.data[0].Data.Nomes[i];
         
-                // for (var i = 0, t = 0; i < dadinhos[2].length; i++ , t++)
-                //     tabela1[i] = response.data[i].Data.Dados[t];
-                // console.log(tabela1[0]);
-                // for (var i = 5, t = 0; i < dadinhos[2].length + 5; i++ , t++)
-                //     tabela1[i] = response.data[i].Data.Dados[t];
-                // console.log(tabela1[2]);
-                // for (var i = 10, t = 0; i < dadinhos[2].length + 10; i++ , t++)
-                //     tabela1[i] = response.data[i].Data.Dados[t];
-                // console.log(tabela1[3]);
-                // for (var i = 15, t = 0; i < dadinhos[2].length + 15; i++ , t++)
-                //     tabela1[i] = response.data[i].Data.Dados[t];
-                // console.log(tabela1[4]);
             })
 
             .catch(function (error) {
@@ -126,7 +114,7 @@ export default {
             }
 
             var options = {
-                title: 'GRAFICO'    ,
+                title: 'GRAFICO',
                 width: tamanhoW,
                 height: tamanhoH,
                 backgroundColor: "#f8f8f8"
@@ -141,6 +129,7 @@ export default {
             var chart4 = new google.visualization.PieChart(document.getElementById('quinta'));
             chart4.draw(datinha, options);
             this.isLoading = false;
+       
           
         },
 
