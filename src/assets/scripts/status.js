@@ -10,6 +10,8 @@ import { ip } from './ip'
 let tabela1 = [];
 let nome1 = [];
 let dadinhos = [];
+let resultado;
+let tam;
 
 export default {
     name: 'Status',
@@ -31,12 +33,12 @@ export default {
         let final = [];
 
         axios
-            .get("http://localhost:8080/ABv/RotaTres", {
+            .get("http://172.16.10.47:8081/ABv/RotaTres", {
                 headers: { Authorization: token }
             })
             .then(function (response) {
 
-                let resultado = response.data;
+                resultado = response.data;
 
                 for (let i = 0; i < resultado.length; i++) {
                     for (let j = 0; j < resultado[i].Data.Dados.length; j++) {
@@ -50,8 +52,12 @@ export default {
                     }
                 }
 
+
                 console.log(tabela1)
                 console.log(nome1)
+                console.log(resultado.length)
+
+                tam = resultado.length;
 
                 //    var i = 0;
                 //    var x = 0;
@@ -63,7 +69,51 @@ export default {
                 //         }
                 //     }
 
-
+       
+                console.log(tam)
+                if (tam > 1) {
+                    document.getElementById("bloco2").style.display = "flex";
+                } if (tam > 2) {
+                    document.getElementById("bloco_1").style.display = "flex";
+                } if (tam > 3) {
+                    document.getElementById("bloco_2").style.display = "flex";
+                } if (tam > 4) {
+                    document.getElementById("bloco_3").style.display = "flex";
+                    if(window.innerHeight > 450){
+                    document.getElementById("corpo_2").style.height = "40vw";
+                    }
+                } if (tam > 5) {
+                    document.getElementById("bloco_4").style.display = "flex";
+                } if (tam > 6) {
+                    document.getElementById("bloco_5").style.display = "flex";
+                } if (tam > 7) {
+                    document.getElementById("bloco_6").style.display = "flex";
+                    if(window.innerHeight > 450) {
+                    document.getElementById("corpo_3").style.height = "40vw";
+                    }
+                } if (tam > 8) {
+                    document.getElementById("bloco_7").style.display = "flex";
+                } if (tam > 9) {
+                    document.getElementById("bloco_8").style.display = "flex";
+                } if (tam > 10) {
+                    document.getElementById("bloco_9").style.display = "flex";
+                    if(window.innerHeight > 450){
+                        document.getElementById("corpo_4").style.height = "40vw";
+                    }
+                } if (tam > 11) {
+                    document.getElementById("bloco_10").style.display = "flex";
+                } if (tam > 12) {
+                    document.getElementById("bloco_11").style.display = "flex";
+                } if (tam > 13) {
+                    document.getElementById("bloco_12").style.display = "flex";
+                    if(window.innerHeight > 450){
+                        document.getElementById("corpo_5").style.height = "40vw";
+                    }
+                } if (tam > 14) {
+                    document.getElementById("bloco_13").style.display = "flex";
+                } if (tam > 15) {
+                    document.getElementById("bloco_14").style.display = "flex";
+                }
 
 
 
@@ -74,52 +124,8 @@ export default {
                 alert("Erro ao carregar!");
                 console.log(error);
             });
-        var tam = 6;
        
-       
-        if (tam > 1) {
-            document.getElementById("bloco2").style.display = "flex";
-        } if (tam > 2) {
-            document.getElementById("bloco_1").style.display = "flex";
-        } if (tam > 3) {
-            document.getElementById("bloco_2").style.display = "flex";
-        } if (tam > 4) {
-            document.getElementById("bloco_3").style.display = "flex";
-            if(window.innerHeight > 450){
-            document.getElementById("corpo_2").style.height = "40vw";
-            }
-        } if (tam > 5) {
-            document.getElementById("bloco_4").style.display = "flex";
-        } if (tam > 6) {
-            document.getElementById("bloco_5").style.display = "flex";
-        } if (tam > 7) {
-            document.getElementById("bloco_6").style.display = "flex";
-            if(window.innerHeight > 450) {
-            document.getElementById("corpo_3").style.height = "40vw";
-            }
-        } if (tam > 8) {
-            document.getElementById("bloco_7").style.display = "flex";
-        } if (tam > 9) {
-            document.getElementById("bloco_8").style.display = "flex";
-        } if (tam > 10) {
-            document.getElementById("bloco_9").style.display = "flex";
-            if(window.innerHeight > 450){
-                document.getElementById("corpo_4").style.height = "40vw";
-            }
-        } if (tam > 11) {
-            document.getElementById("bloco_10").style.display = "flex";
-        } if (tam > 12) {
-            document.getElementById("bloco_11").style.display = "flex";
-        } if (tam > 13) {
-            document.getElementById("bloco_12").style.display = "flex";
-            if(window.innerHeight > 450){
-                document.getElementById("corpo_5").style.height = "40vw";
-            }
-        } if (tam > 14) {
-            document.getElementById("bloco_13").style.display = "flex";
-        } if (tam > 15) {
-            document.getElementById("bloco_14").style.display = "flex";
-        }
+
     },
 
     methods: {
