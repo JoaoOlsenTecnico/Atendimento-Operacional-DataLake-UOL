@@ -28,7 +28,7 @@ export default {
 
               if(token != null) {
                 console.log("oi");
-                router.push({ name: "Home"});
+                router.push({ name: "Status"});
             } else {
                 console.log("erro")
             }

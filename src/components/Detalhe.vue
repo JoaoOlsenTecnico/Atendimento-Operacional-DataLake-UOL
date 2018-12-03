@@ -15,14 +15,15 @@
     <section id="corpo">
         <div id="bloco3">
             <div id="app" >
-            <GChart 
-            :id="variavel"
-            class="tamanho"        
-            type="ColumnChart"                     
-            @ready="onChartReady"
-            /> 
+            <h2> Grafico Expandido </h2> 
+                <GChart  
+                :id="variavel"      
+                type="ColumnChart"                     
+                @ready="onChartReady"
+                class="GraGrande"
+                /> 
             </div>      
-        <h1 v-on:click="voltar()" class="verDetalhe"> VOLTAR </h1>
+   
         </div>
 
         <div id="nao">
@@ -39,7 +40,15 @@
             type="ColumnChart"                     
             @ready="onChartReady"
             /> 
-            </div>     
+            </div>    
+             <div id="app" >
+            <GChart 
+            id="um"
+            class="tamanho"        
+            type="ColumnChart"                     
+            @ready="onChartReady"
+            /> 
+            </div>      
             <div id="app" >
             <GChart 
             id="tres"
@@ -48,7 +57,103 @@
             @ready="onChartReady"
             /> 
             </div>  
-            </div>  
+            </div>
+            <div id="app" >
+            <GChart 
+            id="quatro"
+            class="tamanho"        
+            type="ColumnChart"                     
+            @ready="onChartReady"
+            /> 
+           <div id="app" >
+            <GChart 
+            id="cinco"
+            class="tamanho"        
+            type="ColumnChart"                     
+            @ready="onChartReady"
+            /> 
+            </div> 
+           <div id="app" >
+            <GChart 
+            id="seis"
+            class="tamanho"        
+            type="ColumnChart"                     
+            @ready="onChartReady"
+            /> 
+            </div> 
+           <div id="app" >
+            <GChart 
+            id="sete"
+            class="tamanho"        
+            type="ColumnChart"                     
+            @ready="onChartReady"
+            /> 
+            </div> 
+           <div id="app" >
+            <GChart 
+            id="oito"
+            class="tamanho"        
+            type="ColumnChart"                     
+            @ready="onChartReady"
+            /> 
+            </div> 
+           <div id="app" >
+            <GChart 
+            id="nove"
+            class="tamanho"        
+            type="ColumnChart"                     
+            @ready="onChartReady"
+            /> 
+            </div> 
+           <div id="app" >
+            <GChart 
+            id="dez"
+            class="tamanho"        
+            type="ColumnChart"                     
+            @ready="onChartReady"
+            /> 
+            </div> 
+           <div id="app" >
+            <GChart 
+            id="onze"
+            class="tamanho"        
+            type="ColumnChart"                     
+            @ready="onChartReady"
+            /> 
+            </div> 
+           <div id="app" >
+            <GChart 
+            id="doze"
+            class="tamanho"        
+            type="ColumnChart"                     
+            @ready="onChartReady"
+            /> 
+            </div> 
+           <div id="app" >
+            <GChart 
+            id="treze"
+            class="tamanho"        
+            type="ColumnChart"                     
+            @ready="onChartReady"
+            /> 
+            </div> 
+           <div id="app" >
+            <GChart 
+            id="quatorze"
+            class="tamanho"        
+            type="ColumnChart"                     
+            @ready="onChartReady"
+            /> 
+            </div> 
+           <div id="app" >
+            <GChart 
+            id="quinze"
+            class="tamanho"        
+            type="ColumnChart"                     
+            @ready="onChartReady"
+            /> 
+            </div>           
+            </div>   
         </div>
     </section>
 </div>

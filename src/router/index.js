@@ -21,74 +21,22 @@ var router = new Router({
       path: '/', 
       name: 'Login',
       component: Login,
-    },
-    {
-      path: '/home', 
-      name: 'Home',
-      component: Home,
-      meta: {
-        authorize: true
-      }
-    },       
-
+    },     
     {
       path: '/status',
       name: 'Status',
       component: Status,
-      meta: {
-        authorize: true
-      }
+
     },
-    
+  
     {
       path: '/detalhe',
       name: 'Detalhe',
       component: Detalhe,
-      meta: {
-        authorize: true
-      }
-    },
-    {
-      path: '/search',
-      name: 'Search',
-      component: Search,
-      meta: {
-        authorize: true
-      }
-    },
-    {
-      path: '/tabelaX',
-      name: 'TabelaX',
-      component: TabelaX,
-      meta: {
-        authorize: true
-      }
-    }, 
-    {
-      path: '/tabelaY',
-      name: 'TabelaY',
-      component: TabelaY,
-      meta: {
-        authorize: true
-      }
-    }, 
-    {
-      path: '/grafico',
-      name: 'Grafico',
-      component: Grafico,
-      meta: {
-        authorize: true
-      }
-    },  
-    {
-      path: '/teste',
-      name: 'Teste',
-      component: Teste,
-      meta: {
-        authorize: true
-      }
-    },              
-
+      // meta: {
+      //   authorize: true
+      // }
+    },             
   ],
 
 });
