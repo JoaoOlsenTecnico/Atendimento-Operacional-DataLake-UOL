@@ -25,7 +25,8 @@ export default {
     mounted() {
 
         axios
-            .get("http://localhost:8080/ABv/RotaTres")
+            .get("http://172.16.10.47:8008/api/incidente", {
+                headers: { Authorization: token }})
             .then(function (response) {
             
                 let resultado = response.data;
